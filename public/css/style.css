@@ -1,0 +1,103 @@
+:root {
+    --primary: #2f70b9;
+    --bg: #05a5d8;
+    --secondary-bg: #dbf6ff;
+    --text: #6d6d6d;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--text);
+}
+
+/* Hero */
+.hero {
+    height: 60vh;
+    min-height: 420px;
+    background-image: url("/images/hero.webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.35)
+    );
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.hero-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 5vw, 48px);
+    line-height: 1.05;
+}
+.hero-sub {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+/* Cards */
+.service-card {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(8, 35, 62, 0.08);
+    border: 8px solid rgba(255, 255, 255, 0.9); /* white padding look like design */
+}
+.service-card .card-img-top {
+    height: 170px;
+    object-fit: cover;
+}
+
+/* Utilities */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+/* Make nav background subtle */
+.navbar {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive tweaks for smaller devices */
+@media (max-width: 576px) {
+    .hero {
+        height: 48vh;
+        min-height: 320px;
+    }
+    .hero-title {
+        font-size: 24px;
+    }
+    .service-card .card-img-top {
+        height: 140px;
+    }
+}
+/* Building trust section */
+section img.img-fluid.rounded {
+    border-radius: 12px;
+}
+
+/* Satisfaction section cards */
+section[style*="DBF6FF"] .col-md-4 {
+    background-color: #dbf6ff;
+}
+
+section[style*="DBF6FF"] i {
+    display: inline-block;
+}
+
+/* Footer styling */
+footer .footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+footer .footer-link:hover {
+    text-decoration: underline;
+}
